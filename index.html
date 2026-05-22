@@ -22,148 +22,18 @@
       </nav>
     </div>
   </header>
-
   <main id="workspace">
-    <section class="hero container">
-      <p class="badge">电商设计工作台</p>
-      <h1>电商美工主图设计工作流</h1>
-      <p class="subtitle">从商品资料、竞品分析、卖点提炼到主图版式规划，帮助美工快速完成高转化主图方案。</p>
-      <div class="hero-actions">
-        <button id="startProjectBtn" class="btn btn-primary">开始新主图项目</button>
-        <a class="btn btn-ghost" href="#board">查看主图流程</a>
-      </div>
+    <section class="hero container"><p class="badge">电商设计工作台</p><h1>电商美工主图设计工作流</h1><p class="subtitle">从商品资料、竞品分析、卖点提炼到主图版式规划，帮助美工快速完成高转化主图方案。</p><div class="hero-actions"><button id="startProjectBtn" class="btn btn-primary">开始新主图项目</button><a class="btn btn-ghost" href="#board">查看主图流程</a></div></section>
+    <section id="board" class="section container"><h2>主图设计流程看板</h2><div class="grid cards-3"><article class="card"><h3>1 商品资料收集</h3><p>整理商品名称、类目、价格、活动信息、目标人群。</p></article><article class="card"><h3>2 竞品主图分析</h3><p>记录竞品主图风格、卖点表达、价格利益点、视觉重点。</p></article><article class="card"><h3>3 核心卖点提炼</h3><p>提炼 3-5 个最适合放在主图上的核心卖点。</p></article><article class="card"><h3>4 主图版式规划</h3><p>确定产品位置、人物/场景、标题区、利益点、角标、背景风格。</p></article><article class="card"><h3>5 主图文案生成</h3><p>生成主标题、副标题、利益点、促销文案、角标文案。</p></article><article class="card"><h3>6 交付检查</h3><p>检查尺寸、清晰度、文案可读性、平台规则、视觉统一性。</p></article></div></section>
+    <section id="product-info" class="section container"><h2>商品资料输入区</h2><form class="panel form-grid" onsubmit="return false;"><label>商品名称<input id="productName" type="text" /></label><label>商品类目<input id="productCategory" type="text" /></label><label>商品价格<input id="productPrice" type="text" /></label><label>促销信息<input id="promoInfo" type="text" /></label><label>目标人群<input id="targetAudience" type="text" /></label><label>核心功能<input id="coreFunction" type="text" /></label><label>产品卖点<input id="productSellingPoints" type="text" /></label><label>使用场景<input id="usageScene" type="text" /></label><label>竞品参考<input id="competitorRef" type="text" /></label><label>主图风格选择<select id="mainStyle"><option>简约高级</option><option>促销爆款</option><option>国潮风</option><option>科技感</option><option>母婴温馨</option><option>食品诱人</option><option>家居生活</option><option>服饰穿搭</option></select></label><div class="upload-box"><span>上传商品图</span><button type="button" class="btn btn-ghost">选择文件（仅UI）</button></div></form></section>
+    <section class="section container"><h2>竞品主图分析区</h2><div class="panel"><div class="table-wrap"><table><thead><tr><th>竞品名称</th><th>主图风格</th><th>主图核心文案</th><th>价格/活动表达</th><th>值得参考的地方</th><th>需要避开的地方</th></tr></thead><tbody id="competitorBody"><tr><td>竞品A</td><td>简约高级</td><td>轻量便携 一键开合</td><td>到手价89元</td><td>产品主体清晰</td><td>文案信息过多</td></tr><tr><td>竞品B</td><td>促销爆款</td><td>保温12小时</td><td>第二件半价</td><td>促销层级明确</td><td>色彩过于杂乱</td></tr><tr><td>竞品C</td><td>家居生活</td><td>高颜值桌面搭配</td><td>领券减20</td><td>场景真实自然</td><td>商品比例偏小</td></tr></tbody></table></div><button id="addCompetitorBtn" class="btn btn-secondary">添加竞品记录</button></div></section>
+    <section id="selling-points" class="section container"><h2>卖点提炼区</h2><div class="panel two-col"><ul class="point-list" id="pointList"><li>主卖点：-</li><li>辅助卖点 1：-</li><li>辅助卖点 2：-</li><li>辅助卖点 3：-</li><li>信任背书：-</li><li>促销利益点：-</li></ul><div class="action-col"><button id="generatePointsBtn" class="btn btn-primary">生成卖点建议</button></div></div></section>
+    <section id="layout" class="section container"><h2>主图版式规划区</h2><div class="grid cards-3" id="layoutCards"><article class="card"><h3>1 产品居中型</h3><p>适合：标准产品展示、白底图、品牌感主图。</p><button class="btn btn-ghost" data-layout="产品居中型">选择此版式</button></article><article class="card"><h3>2 左图右文型</h3><p>适合：产品图在左侧，右侧突出标题和利益点。</p><button class="btn btn-ghost" data-layout="左图右文型">选择此版式</button></article><article class="card"><h3>3 右图左文型</h3><p>适合：人物或产品在右侧，左侧放核心文案。</p><button class="btn btn-ghost" data-layout="右图左文型">选择此版式</button></article><article class="card"><h3>4 场景沉浸型</h3><p>适合：食品、家居、母婴、服饰等需要使用场景的商品。</p><button class="btn btn-ghost" data-layout="场景沉浸型">选择此版式</button></article><article class="card"><h3>5 促销爆款型</h3><p>适合：618、双11、周年庆、大促活动主图。</p><button class="btn btn-ghost" data-layout="促销爆款型">选择此版式</button></article><article class="card"><h3>6 对比突出型</h3><p>适合：突出升级、差异、前后对比、竞品优势。</p><button class="btn btn-ghost" data-layout="对比突出型">选择此版式</button></article></div><p id="selectedLayout" class="select-result">已选择版式：未选择</p></section>
+    <section id="copywriting" class="section container"><h2>主图文案生成区</h2><div class="grid cards-3"><article class="card"><h3>生成主标题</h3><button class="btn btn-secondary copy-btn" data-type="main">生成文案</button></article><article class="card"><h3>生成副标题</h3><button class="btn btn-secondary copy-btn" data-type="sub">生成文案</button></article><article class="card"><h3>生成利益点文案</h3><button class="btn btn-secondary copy-btn" data-type="benefit">生成文案</button></article><article class="card"><h3>生成促销角标</h3><button class="btn btn-secondary copy-btn" data-type="promo">生成文案</button></article><article class="card"><h3>生成整套主图文案</h3><button class="btn btn-secondary copy-btn" data-type="all">生成文案</button></article></div><div id="copyResult" class="panel result-box">点击上方按钮后在这里查看模拟文案结果。</div>
+      <div class="panel image-gen"><h3>一键生成可用主图</h3><div class="gen-controls"><label>主图尺寸选择<select id="imageRatio"><option value="1:1">1:1</option><option value="3:4">3:4</option><option value="9:16">9:16</option></select></label><label>主图风格选择<select id="imageStyle"><option>促销爆款</option><option>简约高级</option><option>科技感</option><option>食品诱人</option><option>家居生活</option><option>母婴温馨</option><option>服饰穿搭</option></select></label></div><div class="gen-actions"><button id="generateMainImageBtn" class="btn btn-primary">一键生成主图</button><button id="copyPromptBtn" class="btn btn-ghost">复制生图提示词</button><button id="downloadImageBtn" class="btn btn-secondary" disabled>下载图片</button></div><div id="imageGenStatus" class="status-text">请先填写商品信息，再点击“一键生成主图”。</div><textarea id="promptPreview" class="prompt-preview" readonly></textarea><div id="imagePreview" class="image-preview">生成结果将在这里显示</div></div>
     </section>
-
-    <section id="board" class="section container">
-      <h2>主图设计流程看板</h2>
-      <div class="grid cards-3">
-        <article class="card"><h3>1 商品资料收集</h3><p>整理商品名称、类目、价格、活动信息、目标人群。</p></article>
-        <article class="card"><h3>2 竞品主图分析</h3><p>记录竞品主图风格、卖点表达、价格利益点、视觉重点。</p></article>
-        <article class="card"><h3>3 核心卖点提炼</h3><p>提炼 3-5 个最适合放在主图上的核心卖点。</p></article>
-        <article class="card"><h3>4 主图版式规划</h3><p>确定产品位置、人物/场景、标题区、利益点、角标、背景风格。</p></article>
-        <article class="card"><h3>5 主图文案生成</h3><p>生成主标题、副标题、利益点、促销文案、角标文案。</p></article>
-        <article class="card"><h3>6 交付检查</h3><p>检查尺寸、清晰度、文案可读性、平台规则、视觉统一性。</p></article>
-      </div>
-    </section>
-
-    <section id="product-info" class="section container">
-      <h2>商品资料输入区</h2>
-      <form class="panel form-grid" onsubmit="return false;">
-        <label>商品名称<input id="productName" type="text" placeholder="例如：轻量保温杯" /></label>
-        <label>商品类目<input id="productCategory" type="text" placeholder="例如：家居日用" /></label>
-        <label>商品价格<input id="productPrice" type="text" placeholder="例如：99" /></label>
-        <label>促销信息<input id="promoInfo" type="text" placeholder="例如：满199减30" /></label>
-        <label>目标人群<input id="targetAudience" type="text" placeholder="例如：上班族、学生" /></label>
-        <label>核心功能<input id="coreFunction" type="text" placeholder="例如：12小时保温" /></label>
-        <label>产品卖点<input id="productSellingPoints" type="text" placeholder="例如：防漏、轻便、易清洗" /></label>
-        <label>使用场景<input id="usageScene" type="text" placeholder="例如：通勤、旅行、健身" /></label>
-        <label>竞品参考<input id="competitorRef" type="text" placeholder="例如：A品牌、B品牌" /></label>
-        <label>主图风格选择
-          <select id="mainStyle">
-            <option>简约高级</option>
-            <option>促销爆款</option>
-            <option>国潮风</option>
-            <option>科技感</option>
-            <option>母婴温馨</option>
-            <option>食品诱人</option>
-            <option>家居生活</option>
-            <option>服饰穿搭</option>
-          </select>
-        </label>
-        <div class="upload-box">
-          <span>上传商品图</span>
-          <button type="button" class="btn btn-ghost">选择文件（仅UI）</button>
-        </div>
-      </form>
-    </section>
-
-    <section class="section container">
-      <h2>竞品主图分析区</h2>
-      <div class="panel">
-        <div class="table-wrap">
-          <table>
-            <thead><tr><th>竞品名称</th><th>主图风格</th><th>主图核心文案</th><th>价格/活动表达</th><th>值得参考的地方</th><th>需要避开的地方</th></tr></thead>
-            <tbody id="competitorBody">
-              <tr><td>竞品A</td><td>简约高级</td><td>轻量便携 一键开合</td><td>到手价89元</td><td>产品主体清晰</td><td>文案信息过多</td></tr>
-              <tr><td>竞品B</td><td>促销爆款</td><td>保温12小时</td><td>第二件半价</td><td>促销层级明确</td><td>色彩过于杂乱</td></tr>
-              <tr><td>竞品C</td><td>家居生活</td><td>高颜值桌面搭配</td><td>领券减20</td><td>场景真实自然</td><td>商品比例偏小</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <button id="addCompetitorBtn" class="btn btn-secondary">添加竞品记录</button>
-      </div>
-    </section>
-
-    <section id="selling-points" class="section container">
-      <h2>卖点提炼区</h2>
-      <div class="panel two-col">
-        <ul class="point-list" id="pointList">
-          <li>主卖点：-</li><li>辅助卖点 1：-</li><li>辅助卖点 2：-</li><li>辅助卖点 3：-</li><li>信任背书：-</li><li>促销利益点：-</li>
-        </ul>
-        <div class="action-col"><button id="generatePointsBtn" class="btn btn-primary">生成卖点建议</button></div>
-      </div>
-    </section>
-
-    <section id="layout" class="section container">
-      <h2>主图版式规划区</h2>
-      <div class="grid cards-3" id="layoutCards">
-        <article class="card"><h3>1 产品居中型</h3><p>适合：标准产品展示、白底图、品牌感主图。</p><button class="btn btn-ghost" data-layout="产品居中型">选择此版式</button></article>
-        <article class="card"><h3>2 左图右文型</h3><p>适合：产品图在左侧，右侧突出标题和利益点。</p><button class="btn btn-ghost" data-layout="左图右文型">选择此版式</button></article>
-        <article class="card"><h3>3 右图左文型</h3><p>适合：人物或产品在右侧，左侧放核心文案。</p><button class="btn btn-ghost" data-layout="右图左文型">选择此版式</button></article>
-        <article class="card"><h3>4 场景沉浸型</h3><p>适合：食品、家居、母婴、服饰等需要使用场景的商品。</p><button class="btn btn-ghost" data-layout="场景沉浸型">选择此版式</button></article>
-        <article class="card"><h3>5 促销爆款型</h3><p>适合：618、双11、周年庆、大促活动主图。</p><button class="btn btn-ghost" data-layout="促销爆款型">选择此版式</button></article>
-        <article class="card"><h3>6 对比突出型</h3><p>适合：突出升级、差异、前后对比、竞品优势。</p><button class="btn btn-ghost" data-layout="对比突出型">选择此版式</button></article>
-      </div>
-      <p id="selectedLayout" class="select-result">已选择版式：未选择</p>
-    </section>
-
-    <section id="copywriting" class="section container">
-      <h2>主图文案生成区</h2>
-      <div class="grid cards-3">
-        <article class="card"><h3>生成主标题</h3><button class="btn btn-secondary copy-btn" data-type="main">生成文案</button></article>
-        <article class="card"><h3>生成副标题</h3><button class="btn btn-secondary copy-btn" data-type="sub">生成文案</button></article>
-        <article class="card"><h3>生成利益点文案</h3><button class="btn btn-secondary copy-btn" data-type="benefit">生成文案</button></article>
-        <article class="card"><h3>生成促销角标</h3><button class="btn btn-secondary copy-btn" data-type="promo">生成文案</button></article>
-        <article class="card"><h3>生成整套主图文案</h3><button class="btn btn-secondary copy-btn" data-type="all">生成文案</button></article>
-      </div>
-      <div id="copyResult" class="panel result-box">点击上方按钮后在这里查看模拟文案结果。</div>
-
-      <div class="panel image-gen">
-        <h3>一键生成可用主图</h3>
-        <div class="gen-controls">
-          <label>主图尺寸选择
-            <select id="imageRatio">
-              <option value="1:1">1:1</option>
-              <option value="3:4">3:4</option>
-              <option value="9:16">9:16</option>
-            </select>
-          </label>
-          <label>主图风格选择
-            <select id="imageStyle">
-              <option>促销爆款</option><option>简约高级</option><option>科技感</option><option>食品诱人</option><option>家居生活</option><option>母婴温馨</option><option>服饰穿搭</option>
-            </select>
-          </label>
-        </div>
-        <div class="gen-actions">
-          <button id="generateMainImageBtn" class="btn btn-primary">一键生成主图</button>
-          <button id="copyPromptBtn" class="btn btn-ghost">复制生图提示词</button>
-          <button id="downloadImageBtn" class="btn btn-secondary" disabled>下载图片</button>
-        </div>
-        <div id="imageGenStatus" class="status-text">请先填写商品信息，再点击“一键生成主图”。</div>
-        <textarea id="promptPreview" class="prompt-preview" readonly placeholder="这里会显示自动拼接的提示词"></textarea>
-        <div id="imagePreview" class="image-preview">生成结果将在这里显示</div>
-      </div>
-    </section>
-
-    <section id="checklist" class="section container">
-      <h2>主图交付检查清单</h2>
-      <div class="panel checklist">
-        <label><input type="checkbox" /> 主图尺寸是否符合平台要求</label><label><input type="checkbox" /> 商品主体是否清晰突出</label><label><input type="checkbox" /> 核心卖点是否 3 秒内能看懂</label><label><input type="checkbox" /> 文字是否足够大、足够清晰</label><label><input type="checkbox" /> 价格和促销信息是否准确</label><label><input type="checkbox" /> 背景是否干净不杂乱</label><label><input type="checkbox" /> 主图风格是否符合商品类目</label><label><input type="checkbox" /> 是否避免违规词、极限词</label><label><input type="checkbox" /> 是否保留安全边距</label><label><input type="checkbox" /> 是否方便设计师导出交付</label>
-      </div>
-    </section>
+    <section id="checklist" class="section container"><h2>主图交付检查清单</h2><div class="panel checklist"><label><input type="checkbox"/> 主图尺寸是否符合平台要求</label><label><input type="checkbox"/> 商品主体是否清晰突出</label><label><input type="checkbox"/> 核心卖点是否 3 秒内能看懂</label><label><input type="checkbox"/> 文字是否足够大、足够清晰</label><label><input type="checkbox"/> 价格和促销信息是否准确</label><label><input type="checkbox"/> 背景是否干净不杂乱</label><label><input type="checkbox"/> 主图风格是否符合商品类目</label><label><input type="checkbox"/> 是否避免违规词、极限词</label><label><input type="checkbox"/> 是否保留安全边距</label><label><input type="checkbox"/> 是否方便设计师导出交付</label></div></section>
   </main>
-
   <footer class="footer">电商主图工作流 · 适合美工、运营、设计团队使用</footer>
   <script src="script.js"></script>
-</body>
-</html>
+</body></html>
